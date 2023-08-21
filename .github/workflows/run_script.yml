@@ -23,4 +23,4 @@ jobs:
         run: ssh-keyscan -H 34.207.175.245 >> ~/.ssh/known_hosts
 
       - name: Run Remote Command
-        run: ssh ubuntu@34.207.175.245 'bash -s' < remote_script.sh
+        run: ssh ubuntu@34.207.175.245 "echo 'Hello from GitHub Workflow' > ~/workflow_output.txt"
