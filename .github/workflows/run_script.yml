@@ -20,4 +20,4 @@ jobs:
 
       - name: Run Script on Remote Server
         run: |
-          ssh user@your_server_ip 'bash -s' < remote_script.sh
+          ssh ubuntu@34.207.175.245 'bash -s' < remote_script.sh
