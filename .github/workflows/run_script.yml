@@ -20,7 +20,7 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
 
       - name: Add Server Host Key
-        run: ssh-keyscan -H server_ip >> ~/.ssh/known_hosts
+        run: ssh-keyscan -H 34.207.175.245 >> ~/.ssh/known_hosts
 
       - name: Run Remote Command
         run: ssh ubuntu@34.207.175.245 "echo 'Hello from GitHub Workflow' > ~/workflow_output.txt"
