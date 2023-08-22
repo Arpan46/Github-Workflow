@@ -22,6 +22,6 @@ jobs:
         run: npm install
 
       - name: Run SSL Expiry Check
-        run: bash ssl_expiry_check.sh
+        run: bash ssl_expiry_check.sh domain_list.txt
         env:
           SLACK_WEBHOOK_URL_SECRET: ${{ secrets.SLACK_WEBHOOK_URL_SECRET }}
