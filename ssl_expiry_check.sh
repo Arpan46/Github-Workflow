@@ -4,7 +4,7 @@
 SLACK_WEBHOOK_URL=$SLACK_WEBHOOK_URL_SECRET
 
 # List of domains to check (separate them with spaces)
-DOMAINS="example1.com example2.com example3.com"
+DOMAINS=$(cat domain_list.txt)
 
 for DOMAIN in $DOMAINS; do
     EXPIRY_DATE=$(openssl s_client -connect $DOMAIN:443 -servername $DOMAIN -showcerts < /dev/null 2>/dev/null | openssl x509 -enddate -noout | awk -F'=' '{print $2}')
